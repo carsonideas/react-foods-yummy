@@ -76,12 +76,6 @@ body {
   background-color: var(--orange);
 }
 
-.myfoodfilter-active {
-  border: 0.2rem solid var(--primary-red) !important;
-  background-color: var(--light-red-bg) !important;
-  color: var(--primary-red) !important;
-}
-
 .myfoodviewall {
   background-color: var(--primary-red);
   color: white;
@@ -102,9 +96,12 @@ body {
 
 .myfoodgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 4fr));
   gap: 2.4rem;
   margin-bottom: 4rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .myfoodcard {
