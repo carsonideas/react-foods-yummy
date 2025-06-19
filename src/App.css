@@ -32,9 +32,13 @@ body {
 }
 
 .myfoodcontainer {
-  max-width: 120rem;
-  margin: 0 auto;
+  /* max-width: 120rem; */
+  margin: auto;
   padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  
 
   /* flex-direction: column; */
 }
