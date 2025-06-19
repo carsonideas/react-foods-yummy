@@ -11,11 +11,21 @@ function MyFoodCategoryFilter() {
         <button className="categoryItem active">
           <FaUtensils /> All
         </button>
-        <button className="categoryItem"><FaCocktail /> Drinks</button>
-        <button className="categoryItem"><FaPizzaSlice /> Pizza</button>
-        <button className="categoryItem"><GiSalad /> Salad</button>
-        <button className="categoryItem"><GiChiliPepper /> Spicy</button>
-        <button className="categoryItem"><FaIceCream /> Sweets</button>
+        <button className="categoryItem">
+          <FaCocktail /> Drinks
+        </button>
+        <button className="categoryItem">
+          <FaPizzaSlice /> Pizza
+        </button>
+        <button className="categoryItem">
+          <GiSalad /> Salad
+        </button>
+        <button className="categoryItem">
+          <GiChiliPepper /> Spicy
+        </button>
+        <button className="categoryItem">
+          <FaIceCream /> Sweets
+        </button>
       </div>
       <button className="viewAllBtn">View All</button>
     </nav>

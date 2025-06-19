@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function MyFoodThankYouNote() {
   return (
@@ -8,7 +8,8 @@ function MyFoodThankYouNote() {
           Thank you for visiting HOUSTON meals Yikes.....!
         </h2>
         <p className="myfoodfootertext">
-          We hope you enjoy our delicious food selection. Order now and taste the difference!
+          We hope you enjoy our delicious food selection. Order now and taste
+          the difference!
         </p>
       </div>
     </footer>

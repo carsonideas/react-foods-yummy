@@ -1,91 +1,122 @@
+:root {
+  --primary-red: #ef4444;
+  --hover-red: #dc2626;
+  --light-red-bg: #fef2f2;
+  --orange: #f97316;
+  --gray: #6b7280;
+  --gray-light: #9ca3af;
+  --bg-main: #f9fafb;
+  --text-dark: #1f2937;
+  --font-main: system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 16px; */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+}
 
 .myfoodapp {
   min-height: 100vh;
-  background-color: #f9fafb;
-  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
 }
 
 .myfoodcontainer {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
-  padding: 20px;
-}
+  padding: 2rem;
 
+  /* flex-direction: column; */
+}
 
 .myfoodheader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .myfoodfilters {
   display: flex;
-  gap: 12px;
+  gap: 1.2rem;
+  /* color: black; */
+  /* background-color: white; */
 }
 
 .myfoodfilter {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  background-color: #f9fafb;
-  color: #6b7280;
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 2rem;
+  background-color: var(--bg-main);
+  color: var(--gray);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .myfoodfilter:hover {
-  background-color: #f97316;
+  /* background-color: #f3f4f6; */
+  background-color: var(--orange);
 }
 
 .myfoodfilter-active {
-  border: 2px solid #ef4444 !important;
-  background-color: #fef2f2 !important;
-  color: #ef4444 !important;
+  border: 0.2rem solid var(--primary-red) !important;
+  background-color: var(--light-red-bg) !important;
+  color: var(--primary-red) !important;
 }
 
 .myfoodviewall {
-  background-color: #ef4444;
+  background-color: var(--primary-red);
   color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
   font-weight: 600;
+
+  /* transform: scale(1.05); */
+
+  border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .myfoodviewall:hover {
-  background-color: #f97316;
-  
+  background-color: var(--hover-red);
 }
-
 
 .myfoodgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2.4rem;
+  margin-bottom: 4rem;
 }
-
 
 .myfoodcard {
   background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 1.6rem;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  /* box-shadow: none; */
+  box-shadow: 0 0.4rem 0.6rem -0.1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .myfoodcard:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.4rem);
+  box-shadow: 0 1rem 1.5rem -0.3rem rgba(0, 0, 0, 0.1);
 }
-
 
 .myfoodimageplacing {
   position: relative;
@@ -93,78 +124,62 @@
 
 .myfoodimage {
   width: 100%;
-  height: 200px;
+  height: 20rem;
   object-fit: cover;
 }
 
 .myfooddiscountbadge {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: #f97316;
+  top: 0.01rem;
+  left: 0.01rem;
+  height: 3rem;
+  background-color: var(--orange);
   color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
-}
+  padding: 0.4rem 0.8rem;
 
-.myfoodheart {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 8px;
-  background-color: white;
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
+  /* border-radius: 1.6rem; */
 
-.myfoodheart:hover {
-  transform: scale(1.1);
+  border-top-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
 }
 
 .myfoodrating {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
+  bottom: 1.2rem;
+  right: 1.2rem;
   background-color: white;
-  border-radius: 20px;
-  padding: 4px 8px;
+  border-radius: 2rem;
   display: flex;
   align-items: center;
-  gap: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
 .myfoodratingtext {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
-
 .myfoodinfo {
-  padding: 16px;
+  padding: 1.6rem;
 }
 
 .myfoodtitle {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #1f2937;
-  margin-bottom: 8px;
-  margin-top: 0;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
 }
 
 .myfooddescription {
-  color: #6b7280;
-  font-size: 14px;
-  margin-bottom: 16px;
+  font-size: 1.4rem;
+  color: var(--gray);
   line-height: 1.4;
-  margin-top: 0;
+  margin-bottom: 1.6rem;
 }
-
 
 .myfoodbottom {
   display: flex;
@@ -175,96 +190,93 @@
 .myfoodpricearea {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 
 .mydiscounted {
-  color: #ef4444;
+  font-size: 3.8rem;
+  color: var(--primary-red);
   font-weight: bold;
-  font-size: 18px;
 }
 
 .myoriginalprice {
-  color: #9ca3af;
-  font-size: 14px;
+  font-size: 1.4rem;
+  color: var(--gray-light);
   text-decoration: line-through;
 }
 
 .myfoodaddcart {
-  background-color: #ef4444;
+  background-color: var(--primary-red);
   color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
   font-weight: 600;
+  border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .myfoodaddcart:hover {
-  background-color: #dc2626;
+  /* box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2); */
+
+  background-color: var(--hover-red);
 }
 
-
-.myfoodfooter {
-  text-align: center;
-  margin-top: 48px;
-  padding: 32px;
-  background-color: #f9fafb;
-  border-radius: 16px;
-}
-
-.myfoodfootertitle {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1f2937;
-  margin-bottom: 16px;
-  margin-top: 0;
-}
-
-.myfoodfootertext {
-  color: #6b7280;
-  font-size: 16px;
-  margin: 0;
-}
-
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .myfoodheader {
     flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
+    gap: 1.6rem;
   }
-  
+
   .myfoodfilters {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .myfoodgrid {
     grid-template-columns: 1fr;
   }
-  
+
   .myfoodcontainer {
-    padding: 16px;
+    padding: 1.6rem;
   }
 }
 
-@media (max-width: 480px) {
+.myfoodfooter {
+  text-align: center;
+  margin-top: 4.8rem;
+  padding: 3.2rem;
+  background-color: var(--bg-main);
+  border-radius: 1.6rem;
+}
+
+.myfoodfootertitle {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 1.6rem;
+}
+
+.myfoodfootertext {
+  font-size: 1.6rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 480px) {
   .myfoodfilter {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
   }
-  
+
   .myfoodfooter {
-    padding: 24px 16px;
+    padding: 2.4rem 1.6rem;
   }
-  
+
   .myfoodfootertitle {
-    font-size: 20px;
+    font-size: 2rem;
   }
-  
+
   .myfoodfootertext {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
