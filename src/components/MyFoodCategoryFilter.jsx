@@ -6,7 +6,7 @@ import { FaIceCream, FaUtensils } from "react-icons/fa";
 
 function MyFoodCategoryFilter() {
   return (
-    <nav className="foodCategoryNav">
+    <div className="foodCategoryNav">
       <div className="categoryList">
         <button className="categoryItem active">
           <FaUtensils /> All
@@ -28,7 +28,7 @@ function MyFoodCategoryFilter() {
         </button>
       </div>
       <button className="viewAllBtn">View All</button>
-    </nav>
+    </div>
   );
 }
 
